@@ -5,7 +5,7 @@ public class App {
         Scanner input = new Scanner(System.in);
         System.out.println("===Selamat Datang di Program Kalkulasi Nilai PBO===");
 
-        while (true) { // program akan looping input data sampai user ingin exit
+        while (true) { // program akan looping input data sampai user ingin exit atau keluar dr program
             System.out.print("\nInputkan Nama (atau ketik 'exit' untuk keluar): ");
             String nama = input.nextLine();
 
