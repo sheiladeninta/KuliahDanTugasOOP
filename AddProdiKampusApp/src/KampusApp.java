@@ -197,7 +197,7 @@ public class KampusApp {
             for (Prodi prodi : semuaProdi) {
                 System.out.println("ID Prodi: " + prodi.getIDProdi());
                 System.out.println("Nama Prodi: " + prodi.getNamaProdi());
-                System.out.println("----------------------");
+                System.out.println("--------------------------------------------");
             }
         }
         showMenu();
@@ -214,7 +214,7 @@ public class KampusApp {
                 System.out.println("NIM: " + mahasiswa.getNim());
                 System.out.println("Nama: " + mahasiswa.getNama());
                 System.out.println("Prodi: " + db.prodiTbl.getProdiById(mahasiswa.getIDProdi()).getNamaProdi());
-                System.out.println("----------------------");
+                System.out.println("--------------------------------------------");
             }
         }
         showMenu();
