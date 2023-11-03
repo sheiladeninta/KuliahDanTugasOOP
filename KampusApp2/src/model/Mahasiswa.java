@@ -15,8 +15,14 @@ public class Mahasiswa {
         this.nama = nama;
     }
 
-    public Mahasiswa(String nim, String nama) {
+    private String IDProdi;
+    public String getIDProdi(){
+        return IDProdi;
+    }
+
+    public Mahasiswa(String nim, String nama, String IDProdi) {
         this.nim = nim;
         this.nama = nama;
+        this.IDProdi = IDProdi;
     }
 }
