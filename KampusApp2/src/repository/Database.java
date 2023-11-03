@@ -3,18 +3,21 @@ package repository;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.google.gson.Gson;
 
 import model.DBTables;
+import model.Mahasiswa;
 
 public class Database {
     private Gson gson;
     private String namaFileDataMahasiswa = "db_kampusapp";
-    protected DBTables tables = new DBTables();
+    public DBTables tables = new DBTables();
     public MahasiswaTbl mahasiswaTbl = new MahasiswaTbl(this);
-
+    public ProdiTbl prodiTbl = new ProdiTbl(this);
+    
     public Database() {
         gson = new Gson();
         readDBFile();
@@ -38,4 +41,9 @@ public class Database {
             
         }
     }
+
+    public ArrayList<Mahasiswa> read() {
+        return tables.dataMahasiswa;
+    }
+
 }
