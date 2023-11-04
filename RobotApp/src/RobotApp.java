@@ -38,10 +38,10 @@ public class RobotApp {
                 break;
             }
 
-            char direction = instruction.charAt(0);
+            char arah = instruction.charAt(0);
             int langkah = Integer.parseInt(instruction.substring(1));
 
-            switch (direction) {
+            switch (arah) {
                 case 'd':
                     moveRobot(1, 0, langkah);
                     break;
