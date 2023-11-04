@@ -39,20 +39,20 @@ public class RobotApp {
             }
 
             char direction = instruction.charAt(0);
-            int step = Integer.parseInt(instruction.substring(1));
+            int langkah = Integer.parseInt(instruction.substring(1));
 
             switch (direction) {
                 case 'd':
-                    moveRobot(1, 0, step);
+                    moveRobot(1, 0, langkah);
                     break;
                 case 'a':
-                    moveRobot(-1, 0, step);
+                    moveRobot(-1, 0, langkah);
                     break;
                 case 'w':
-                    moveRobot(0, -1, step);
+                    moveRobot(0, -1, langkah);
                     break;
                 case 's':
-                    moveRobot(0, 1, step);
+                    moveRobot(0, 1, langkah);
                     break;
                 default:
                     System.out.println("Instruksi tidak dikenali, permainan selesai");
@@ -61,9 +61,9 @@ public class RobotApp {
 
         } while (true);
     }
-
-    private void moveRobot(int dx, int dy, int step) {
-        Position newPosition = new Position(robot.getPosition().getX() + dx * step, robot.getPosition().getY() + dy * step);
+    // string bisa diconvert ke int jika stringnya harus ada angka
+    private void moveRobot(int dx, int dy, int langkah) {
+        Position newPosition = new Position(robot.getPosition().getX() + dx * langkah, robot.getPosition().getY() + dy * langkah);
 
         if (isWithinBounds(newPosition)) {
             robot.setPosition(newPosition);
