@@ -16,21 +16,26 @@ public class ATM {
 
         System.out.print("Masukkan nomor kartu: ");
         int nomorKartu = scanner.nextInt();
-        System.out.println("Masukkan PIN: ");
-        int pin = scanner.nextInt();
 
-        int pinIndex = 1;
-        for (int i = 0; i < data_atm.length; i++) {
-            if (data_atm [i][0] == nomorKartu){
-                pinIndex = i;
+        boolean valid = false;
+        int index = -1;
+        for (int i = 0; i < data_atm.length; i++){
+            if (data_atm[i][0] == nomorKartu){
+                valid = true;
+                index = i;
                 break;
             }
         }
-        if (pinIndex == -0) {
-            System.out.println("Nomor kartu SALAH!");
-            return;
-        }
-    }
 
+        if (valid){
+            System.out.println("Masukkan PIN Anda: ");
+            int pin = scanner.nextInt();
+            
+        } else {
+            System.out.println("Nomor Kartu yang diinputkan tidak valid!");
+        }
+
+        
+    }
 }
         

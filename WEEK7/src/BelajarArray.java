@@ -12,10 +12,10 @@ public class App {
         daftar_nama_mahasiswa_2[0][1] = "silma";
         System.out.println(daftar_nama_mahasiswa_2[1][1]); // dia akan print null krn blm diisi untuk posisi 1,1
 
-        String[][]daftar_nama_mhs_2 ={
-            {"Sheila", "Lala", "Silma", "Jihan"},
+        // String[][]daftar_nama_mhs_2 ={
+        //     {"Sheila", "Lala", "Silma", "Jihan"},
             
-        }
+        // }
 
     }
 }
