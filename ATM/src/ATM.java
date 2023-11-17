@@ -30,12 +30,19 @@ public class ATM {
         if (valid){
             System.out.println("Masukkan PIN Anda: ");
             int pin = scanner.nextInt();
-            
+            if (data_atm[index][1] == pin){
+                System.out.println("Jumlah uang yang ditarik :");
+                int tarikUang = scanner.nextInt();
+
+                if tarikUang > 
+            } else{
+                System.out.println("PIN Anda tidak valid!");
+            }
         } else {
             System.out.println("Nomor Kartu yang diinputkan tidak valid!");
-        }
+        } 
 
-        
+        scanner.close();
     }
 }
         

@@ -1,4 +1,4 @@
-public class App {
+public class BelajarArray {
     public static void main(String[] args) {
         // 1 dimensi
         String [] daftar_nama_mahasiswa = new String[10];

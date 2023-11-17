@@ -23,6 +23,7 @@ public class RobotApp {
     private Scanner scanner;
 
     public RobotApp() {
+        // contoh konfigurasi (inisiasi object layout) area permainan: X = 10, Y = 10, icon area yang tidak ditempati robot adalah '*'
         this.layout = new Layout(10, 10, '*');
         this.scanner = new Scanner(System.in);
         String instruction = "";
@@ -59,7 +60,7 @@ public class RobotApp {
                     break;
             }
 
-        } while (true);
+        } while (instruction.equals("x"));
     }
     // string bisa diconvert ke int jika stringnya harus ada angka
     private void moveRobot(int dx, int dy, int langkah) {
