@@ -5,8 +5,14 @@ public class Main {
         formulir_01.tataTertib();
 
         FormulirDosen formulir_02 = new FormulirDosen();
+        System.out.println("=======================");
         formulir_02.caraBayar();
         formulir_02.tataTertib();
+
+        FormulirAdmin formulir_03 = new FormulirAdmin();
+        System.out.println("=======================");
+        formulir_03.caraBayar();
+        formulir_03.tataTertib();
     }
     
 }
