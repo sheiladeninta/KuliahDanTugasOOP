@@ -14,5 +14,6 @@ public class Main {
         formulir_03.caraBayar();
         formulir_03.tataTertib();
     }
-    
+    // bikin tugas contoh abstrak dg override dan overloading
+    BaseFormulir [] listFormulir = BaseFormulir[5];
 }
