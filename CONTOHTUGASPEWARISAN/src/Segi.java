@@ -22,10 +22,6 @@ public class Segi extends BangunDatar {
         double hasilLuasSegiPanjang = panjang * lebar;
         return hasilLuasSegiPanjang;
     }
-    public double hitungLuas(double sisi){
-        double hasilLuasSegi = sisi * sisi;
-        return hasilLuasSegi;
-    }
 
     @Override
     public double hitungKeliling(){

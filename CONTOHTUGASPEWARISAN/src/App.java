@@ -5,7 +5,7 @@ public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Pilihan Bangun Datar: ");
+        System.out.println("Hitung Bangun Datar dan Bangun Ruang");
         System.out.println("[1] Bola");
         System.out.println("[2] Kubus");
         System.out.println("[3] Lingkaran");
@@ -13,7 +13,7 @@ public class App {
         System.out.println("[5] Tabung");
         System.out.println("[6] Trapesium");
 
-        System.out.print("Masukkan pilihan Anda: ");
+        System.out.print("Masukkan bangun yang ingin dihitung: ");
         int pilihan = scanner.nextInt();
 
         switch (pilihan) {
@@ -45,10 +45,10 @@ public class App {
                 break;
 
             case 4: // Segi
-                System.out.print("Apakah Anda ingin menghitung persegi panjang? (Y/N): ");
+                System.out.print("Ingin menghitung persegi panjang atau segi lain? (PP/SL): ");
                 String isPersegiPanjang = scanner.next();
 
-                if (isPersegiPanjang.equalsIgnoreCase("Y")) {
+                if (isPersegiPanjang.equalsIgnoreCase("PP")) {
                     System.out.print("Masukkan panjang persegi panjang: ");
                     double panjangPersegiPanjang = scanner.nextDouble();
                     System.out.print("Masukkan lebar persegi panjang: ");
@@ -64,8 +64,8 @@ public class App {
                     double jumlahSisiSegi = scanner.nextDouble();
 
                     Segi segi = new Segi("Segi", 0,0, sisiSegi, jumlahSisiSegi);
-                    System.out.println("Luas segi: " + segi.hitungLuas());
-                    System.out.println("Keliling segi: " + segi.hitungKeliling());
+                    System.out.println("Keliling segi: " + (jumlahSisiSegi != 4 ? segi.hitungKeliling(sisiSegi, jumlahSisiSegi) : segi.hitungKeliling()));
+
                 }
                 break;
 
