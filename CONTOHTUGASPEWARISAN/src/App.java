@@ -22,7 +22,6 @@ public class App {
                 double diameterBola = scanner.nextDouble();
                 Bola bola = new Bola("Bola", diameterBola);
 
-                // Cetak luas dan volume bola
                 System.out.println("Luas bola: " + bola.hitungLuas());
                 System.out.println("Volume bola: " + bola.hitungVolume());
                 break;
@@ -32,7 +31,6 @@ public class App {
                 double sisiKubus = scanner.nextDouble();
                 Kubus kubus = new Kubus("Kubus", sisiKubus);
 
-                // Cetak luas dan volume kubus
                 System.out.println("Luas kubus: " + kubus.hitungLuas());
                 System.out.println("Volume kubus: " + kubus.hitungVolume());
                 break;
@@ -42,8 +40,8 @@ public class App {
                 double diameterLingkaran = scanner.nextDouble();
                 Lingkaran lingkaran = new Lingkaran("Lingkaran", diameterLingkaran);
 
-                // Cetak luas lingkaran
                 System.out.println("Luas lingkaran: " + lingkaran.hitungLuas());
+                System.out.println("Luas lingkaran: " + lingkaran.hitungKeliling());
                 break;
 
             case 4: // Segi
@@ -57,28 +55,16 @@ public class App {
                     double lebarPersegiPanjang = scanner.nextDouble();
 
                     Segi segi = new Segi("Persegi Panjang", panjangPersegiPanjang, lebarPersegiPanjang, 4, 4);
-
-                    // Cetak luas segi
                     System.out.println("Luas segi: " + segi.hitungLuas());
-
-                    // Cetak keliling segi
                     System.out.println("Keliling segi: " + segi.hitungKeliling());
                 } else {
-                    System.out.print("Masukkan panjang segi: ");
-                    double panjangSegi = scanner.nextDouble();
-                    System.out.print("Masukkan lebar segi: ");
-                    double lebarSegi = scanner.nextDouble();
                     System.out.print("Masukkan sisi segi: ");
                     double sisiSegi = scanner.nextDouble();
                     System.out.print("Masukkan jumlah sisi segi: ");
                     double jumlahSisiSegi = scanner.nextDouble();
 
-                    Segi segi = new Segi("Segi", panjangSegi, lebarSegi, sisiSegi, jumlahSisiSegi);
-
-                    // Cetak luas segi
+                    Segi segi = new Segi("Segi", 0,0, sisiSegi, jumlahSisiSegi);
                     System.out.println("Luas segi: " + segi.hitungLuas());
-
-                    // Cetak keliling segi
                     System.out.println("Keliling segi: " + segi.hitungKeliling());
                 }
                 break;
@@ -90,8 +76,6 @@ public class App {
                 double tinggiTabung = scanner.nextDouble();
 
                 Tabung tabung = new Tabung("Tabung", diameterTabung, tinggiTabung);
-
-                // Cetak luas dan volume tabung
                 System.out.println("Luas tabung: " + tabung.hitungLuas());
                 System.out.println("Volume tabung: " + tabung.hitungVolume());
                 break;
@@ -109,8 +93,6 @@ public class App {
                 double tinggiTrapesium = scanner.nextDouble();
 
                 Trapesium trapesium = new Trapesium("Trapesium", sisiAtasTrapesium, sisiBawahTrapesium, sisiSamping1Trapesium, sisiSamping2Trapesium, tinggiTrapesium);
-
-                // Cetak luas dan keliling trapesium
                 System.out.println("Luas trapesium: " + trapesium.hitungLuas());
                 System.out.println("Keliling trapesium: " + trapesium.hitungKeliling());
                 break;
@@ -119,8 +101,6 @@ public class App {
                 System.out.println("Pilihan tidak valid.");
                 break;
         }
-
-        // Tutup scanner
         scanner.close();
     }
 }

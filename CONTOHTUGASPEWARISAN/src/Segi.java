@@ -4,18 +4,27 @@ public class Segi extends BangunDatar {
     public double sisi;
     public double jumlahSisi;
 
-    Segi(String nama, double panjang, double lebar, double sisi, double jumlahSisi){
-        super(nama);
+    Segi(double panjang, double lebar, double sisi, double jumlahSisi){
         this.panjang = panjang;
         this.lebar = lebar;
         this.sisi = sisi;
         this.jumlahSisi = jumlahSisi;
     }
-
+    Segi(String nama, double panjang, double lebar, double sisi, double jumlahSisi){
+        super();
+        this.panjang = panjang;
+        this.lebar = lebar;
+        this.sisi = sisi;
+        this.jumlahSisi = jumlahSisi;
+    }
     @Override
     public double hitungLuas(){
         double hasilLuasSegiPanjang = panjang * lebar;
         return hasilLuasSegiPanjang;
+    }
+    public double hitungLuas(double sisi){
+        double hasilLuasSegi = sisi * sisi;
+        return hasilLuasSegi;
     }
 
     @Override

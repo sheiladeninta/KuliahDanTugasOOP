@@ -1,8 +1,11 @@
 public class Kubus extends BangunRuang {
     public double sisi;
 
+    Kubus(double sisi){
+        this.sisi = sisi;
+    }
     Kubus(String nama, double sisi){
-        super(nama);
+        super();
         this.sisi = sisi;
     }
 
