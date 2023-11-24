@@ -13,7 +13,12 @@ public class Main {
         System.out.println("=======================");
         formulir_03.caraBayar();
         formulir_03.tataTertib();
+
+        BaseFormulir[] listFormulir = new BaseFormulir[5];
+        listFormulir[0] = new FormulirAdmin();
+        listFormulir[1] = new FormulirDosen();
+        listFormulir[2] = new FormulirMahasiswa();
+        
+        ((FormulirMahasiswa)listFormulir[2]).nim = "1202223324";
     }
-    // bikin tugas contoh abstrak dg override dan overloading
-    BaseFormulir [] listFormulir = BaseFormulir[5];
 }
